@@ -17,7 +17,7 @@ By default 80Scan will search the body of the response for any needles (the HTML
 
     node 80scan.js --cidr 192.168.0.0/24 --needles needles.txt
 
-You can also search the header response for any needles. Note that you can not search both at the same time:
+You can search the header response for any needles. Note you cannot search both at the same time:
 
     node 80scan.js --cidr 192.168.0.0/24 --needles needles.txt --headers
 
@@ -30,9 +30,9 @@ Ever heard the term *looking for a needle in a haystack*? That's where the term 
 
 You can pass any text file to 80Scan, but each *needle* must be seperated by a new line. For example, here is a file that has common needles for web servers:
 
-    nginx
     apache
     iis
     micro_httpd
+    nginx
 
 If you pass this to 80Scan it will search the the response to check if they contain any of the above needles.
